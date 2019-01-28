@@ -37,8 +37,6 @@ struct Bank : Codable{
     }
 }
 
-// Mam pytania. czy trzeba używać EXTENSION, bo bez niego kod działa?
-// Napisałam EXTENSION, bo przeczytałam dokumentacje: Encoding and Decoding Custom Types.
 extension Bank {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
